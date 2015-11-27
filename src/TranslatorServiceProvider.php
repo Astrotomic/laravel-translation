@@ -15,14 +15,10 @@ class TranslatorServiceProvider extends ServiceProvider
             return Translator::getInstance();
         });
 
-        $this->app->singleton('translator.command.view.compile', function($app) {
-            return new CompileViews();
-        });
-        $this->commands('translator.command.view.compile');
-        $this->app->singleton('translator.command.trans.po', function($app) {
-            return new TranslatorCreatePo();
-        });
-        $this->commands('translator.command.trans.po');
+        $this->commands([
+            TranslatorCreatePo::class,
+            CompileViews::class,
+        ]);
     }
 
     public function boot()
