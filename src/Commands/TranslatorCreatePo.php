@@ -3,7 +3,7 @@ namespace Gummibeer\Laravel\Translation\Commands;
 
 use Illuminate\Console\Command;
 
-class TranslationCreatePo extends Command
+class TranslatorCreatePo extends Command
 {
     protected $signature = 'trans:po';
     protected $description = 'Creates/Updates the PO files';
