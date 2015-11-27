@@ -5,13 +5,12 @@ use Gummibeer\Laravel\Translation\Commands\CompileViews;
 use Gummibeer\Laravel\Translation\Commands\TranslatorCreatePo;
 use Gummibeer\Laravel\Translation\Libs\Translator;
 use Illuminate\Support\ServiceProvider;
-use Symfony\Component\Translation\Translator as SymfonyTranslator;
 
 class TranslatorServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton(SymfonyTranslator::class, function ($app) {
+        $this->app->singleton('gummibeer.translator', function ($app) {
             return Translator::getInstance();
         });
 
@@ -31,9 +30,7 @@ class TranslatorServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'translator',
-            'translator.command.view.compile',
-            'translator.command.trans.po',
+            'gummibeer.translator',
         ];
     }
 }

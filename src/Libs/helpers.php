@@ -12,7 +12,7 @@ if (!function_exists('__')) {
         if(is_null($locale)) {
             $locale = \App::getLocale();
         }
-        $trans = \Translator::getInstance()->trans($message, [], null, $locale);
+        $trans = \Gummibeer\Laravel\Translation\Libs\Translator::getInstance()->trans($message, [], null, $locale);
         $trans = empty($trans) ? $message : $trans;
         $trans = count($arguments) ? vsprintf($trans, $arguments) : $trans;
         return $trans;

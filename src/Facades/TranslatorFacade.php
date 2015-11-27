@@ -7,6 +7,6 @@ class TranslatorFacade extends IlluminateFacade
 {
     protected static function getFacadeAccessor()
     {
-        return 'translator';
+        return 'gummibeer.translator';
     }
 }
