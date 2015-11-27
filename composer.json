@@ -1,0 +1,29 @@
+{
+    "name": "gummibeer/laravel-translation",
+    "description": "A Laravel 5 package that implements the Symfony Po-Translation lib.",
+    "type": "library",
+    "require": {
+        "php" : ">=5.5.0",
+        "illuminate/support": "5.*",
+        "illuminate/filesystem": "5.*",
+        "illuminate/console": "5.*",
+        "illuminate/view": "5.*",
+        "symfony/translation": "2.7.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gummibeer",
+            "email": "dev.gummibeer@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Gummibeer\\Laravel\\Translation": "src"
+        },
+        "files": [
+            "src/Libs/helpers.php"
+        ]
+    }
+}
