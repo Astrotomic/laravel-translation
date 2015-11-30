@@ -35,4 +35,7 @@ return [
         'resources/views',
         'storage/framework/views/php',
     ],
+
+    // should the translations be cached in debug mode
+    'cache_on_debug' => false,
 ];

@@ -32,7 +32,7 @@ class Translator
 
     protected static function createInstance()
     {
-        if (config('app.debug') && !env('NEVER_FORGET_CACHE', false)) {
+        if (config('app.debug') && !config('trans.cache_on_debug')) {
             \Cache::forget('po_cache');
         }
 
