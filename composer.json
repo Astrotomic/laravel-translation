@@ -1,5 +1,5 @@
 {
-    "name": "gummibeer/laravel-translation",
+    "name": "astrotomic/laravel-translation",
     "description": "A Laravel 5 package that implements the Symfony Po-Translation lib.",
     "type": "library",
     "require": {
