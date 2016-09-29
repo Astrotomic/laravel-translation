@@ -20,7 +20,7 @@ class CompileViews extends Command
     {
         $this->info('start view compiler');
         $targetDir = storage_path(config('trans.view_store_path'));
-        if (!file_exists($targetDir)) {
+        if (! file_exists($targetDir)) {
             $this->createDirectory($targetDir);
             $this->comment('created directory '.$targetDir);
         }
@@ -40,7 +40,7 @@ class CompileViews extends Command
 
     protected function createDirectory($path)
     {
-        if (!mkdir($path)) {
+        if (! mkdir($path)) {
             throw new \RuntimeException(sprintf('Can\'t create the directory: %s', $path));
         }
     }
