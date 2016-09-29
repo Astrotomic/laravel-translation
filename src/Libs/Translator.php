@@ -1,4 +1,5 @@
 <?php
+
 namespace Gummibeer\Laravel\Translation\Libs;
 
 use Symfony\Component\Translation\Loader\PoFileLoader;
@@ -27,6 +28,7 @@ class Translator
         if (null === self::$instance) {
             self::$instance = self::createInstance();
         }
+
         return self::$instance;
     }
 
@@ -44,13 +46,14 @@ class Translator
             $translator->addLoader('po', new PoFileLoader());
             $translator->setFallbackLocales([config('app.locale')]);
             foreach ($locales as $locale) {
-                $path = base_path($basePath . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . 'LC_MESSAGES');
-                $file = $path . DIRECTORY_SEPARATOR . 'messages.po';
+                $path = base_path($basePath.DIRECTORY_SEPARATOR.$locale.DIRECTORY_SEPARATOR.'LC_MESSAGES');
+                $file = $path.DIRECTORY_SEPARATOR.'messages.po';
                 if (file_exists($file)) {
                     $translator->addResource('po', $file, $locale);
                     $translator->getCatalogue($locale);
                 }
             }
+
             return $translator;
         });
     }

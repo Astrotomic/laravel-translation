@@ -1,4 +1,5 @@
 <?php
+
 namespace Gummibeer\Laravel\Translation;
 
 use Gummibeer\Laravel\Translation\Commands\CompileViews;
@@ -8,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
 
 class TranslatorServiceProvider extends ServiceProvider
 {
-    protected $configPath =  __DIR__ . '/../config/config.php';
+    protected $configPath = __DIR__.'/../config/config.php';
 
     public function register()
     {
