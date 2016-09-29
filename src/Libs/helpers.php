@@ -1,4 +1,5 @@
 <?php
+
 if (!function_exists('_n')) {
     function _n($msgid1, $msgid2, $n)
     {
@@ -9,12 +10,13 @@ if (!function_exists('_n')) {
 if (!function_exists('__')) {
     function __($message, $arguments = [], $locale = null)
     {
-        if(is_null($locale)) {
+        if (is_null($locale)) {
             $locale = \App::getLocale();
         }
         $trans = \Gummibeer\Laravel\Translation\Libs\Translator::getInstance()->trans($message, [], null, $locale);
         $trans = empty($trans) ? $message : $trans;
         $trans = count($arguments) ? vsprintf($trans, $arguments) : $trans;
+
         return $trans;
     }
 }

@@ -22,7 +22,7 @@ class CompileViews extends Command
         $targetDir = storage_path(config('trans.view_store_path'));
         if (!file_exists($targetDir)) {
             $this->createDirectory($targetDir);
-            $this->comment('created directory ' . $targetDir);
+            $this->comment('created directory '.$targetDir);
         }
         $path = base_path(config('trans.view_blade_path'));
         $fs = new Filesystem($path);
@@ -30,11 +30,11 @@ class CompileViews extends Command
         $compiler = new BladeCompiler($fs, $targetDir);
         foreach ($files as $file) {
             $filePath = $file->getRealPath();
-            $this->comment('compile view: ' . $filePath);
+            $this->comment('compile view: '.$filePath);
             $compiler->setPath($filePath);
             $contents = $compiler->compileString($fs->get($filePath));
             $compiledPath = $compiler->getCompiledPath($compiler->getPath());
-            $fs->put($compiledPath . '.php', $contents);
+            $fs->put($compiledPath.'.php', $contents);
         }
     }
 

@@ -3,9 +3,9 @@
 return [
     // Details for the PO file header
     'po' => [
-        'project' => 'TranslationProject',
-        'translator' => 'Gummibeer <dev.gummibeer@gmail.com>',
-        'charset' => 'UTF-8',
+        'project'       => 'TranslationProject',
+        'translator'    => 'Gummibeer <dev.gummibeer@gmail.com>',
+        'charset'       => 'UTF-8',
         'keywords_list' => [
             '_',
             '__',
