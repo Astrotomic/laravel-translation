@@ -20,7 +20,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Gummibeer\\Laravel\\Translation\\": "src"
+            "Astrotomic\\Laravel\\Translation\\": "src"
         },
         "files": [
             "src/Libs/helpers.php"

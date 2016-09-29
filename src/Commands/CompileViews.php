@@ -1,6 +1,6 @@
 <?php
 
-namespace Gummibeer\Laravel\Translation\Commands;
+namespace Astrotomic\Laravel\Translation\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
