@@ -1,4 +1,5 @@
 <?php
+
 namespace Astrotomic\Laravel\Translation\Facades;
 
 use Illuminate\Support\Facades\Facade as IlluminateFacade;
